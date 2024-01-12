@@ -23,4 +23,3 @@ int main() {
 		std::cout << kmin << std::endl;
 	}
 }
-Показать детали тестирования
