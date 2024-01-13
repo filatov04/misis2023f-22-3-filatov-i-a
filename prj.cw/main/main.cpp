@@ -80,12 +80,12 @@ bool isMatrixEmpty(const Eigen::MatrixXd& mat) {
 
 int main(int, char**)
 {
-    igl::readOBJ("..\\..\\prj.cw\\main\\objects\\cheekbones1.obj", v_cheekbones, f_cheekbones);
-    igl::readOBJ("..\\..\\prj.cw\\main\\objects\\chin1.obj", v_chin, f_chin);
-    igl::readOBJ("..\\..\\prj.cw\\main\\objects\\horns1.obj", v_horns, f_horns);
-    igl::readOBJ("..\\..\\prj.cw\\main\\objects\\lips1.obj", v_lips, f_lips);
-    igl::readOBJ("..\\..\\prj.cw\\main\\objects\\nose1.obj", v_nose, f_nose);
-    igl::readOBJ("..\\..\\prj.cw\\main\\objects\\cheek1.obj", v_cheek, f_cheek);
+    igl::readOBJ("..\\..\\..\\prj.cw\\main\\objects\\cheekbones1.obj", v_cheekbones, f_cheekbones);
+    igl::readOBJ("..\\..\\..\\prj.cw\\main\\objects\\chin1.obj", v_chin, f_chin);
+    igl::readOBJ("..\\..\\..\\prj.cw\\main\\objects\\horns1.obj", v_horns, f_horns);
+    igl::readOBJ("..\\..\\..\\prj.cw\\main\\objects\\lips1.obj", v_lips, f_lips);
+    igl::readOBJ("..\\..\\..\\prj.cw\\main\\objects\\nose1.obj", v_nose, f_nose);
+    igl::readOBJ("..\\..\\..\\prj.cw\\main\\objects\\cheek1.obj", v_cheek, f_cheek);
     igl::opengl::glfw::Viewer viewer;
 
     //viewer.data().set_mesh(V, F);
@@ -275,7 +275,7 @@ int main(int, char**)
                 std::string face = "face_save_";
                 std::string obj = ".obj";
                 std::string save = "save/";
-                std::string save2 = "../../prj.cw/main/";
+                std::string save2 = "../../../prj.cw/main/";
                 currentTimeString = save2 + save + face + currentTimeString + obj;
                 igl::writeOBJ(currentTimeString, Union, f0);
                 ImGui::OpenPopup("Save");
